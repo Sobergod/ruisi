@@ -4,7 +4,54 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
+    imgUrls: [
+      '/images/banner1.png',
+    ],
+    indicatorDots: false,
+    autoplay: false,
+    interval: 5000,
+    duration: 1000,
+    course: [{
+      id: "1",
+      img: "/images/img1.png",
+      title: "学英语",
+    }, {
+      id: "2",
+      img: "/images/img2.png",
+      title: "学英语",
+    }, {
+      id: "3",
+      img: "/images/img3.png",
+      title: "6-12岁英语课程",
+    }, {
+      id: "4",
+      img: "/images/img4.png",
+      title: "3-5岁英语课程",
+    }],
+    activeList: [{
+      id: "3",
+      img: "/images/img3.png",
+      title: "瑞思夏令营活动",
+    }, {
+      id: "4",
+      img: "/images/img4.png",
+      title: "瑞思周年庆活动",
+    }],
+    questionList: [{
+        id: '1',
+        img: '/images/img5.png',
+        title: '问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题?',
+      },
+      {
+        id: '2',
+        img: '/images/img5.png',
+        title: '问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题?',
+      }, {
+        id: '2',
+        img: '/images/img5.png',
+        title: '问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题?',
+      },
+    ],
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -15,13 +62,27 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
+  navToCourseListTap: function(e) {
+    var id = e.currentTarget.dataset.id,
+      title = e.currentTarget.dataset.title;
+    wx.navigateTo({
+      url: '',
+    })
+  },
+  navToActiveListTap: function(e) {
+    var id = e.currentTarget.dataset.id,
+      title = e.currentTarget.dataset.title;
+    wx.navigateTo({
+      url: '',
+    })
+  },
+  onLoad: function() {
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
-    } else if (this.data.canIUse){
+    } else if (this.data.canIUse) {
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {

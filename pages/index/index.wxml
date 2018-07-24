@@ -1,13 +1,98 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+<view class='banner'>
+  <swiper class='swiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item class='swiper-item'>
+        <image src="{{item}}" class="slide-image" mode='widthFix'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='broadcast'>
+  <view class='bl'>
+    <image class='icon' src='/images/icon/icon1.png'></image>
+    <text class='t1'>最新公告:</text>
+  </view>
+</view>
+<view class='menu'>
+  <view class='menu-item'>
+    <image class='i1' src='/images/icon/icon_pinpai.png'></image>
+    <text>品牌介绍</text>
+  </view>
+  <view class='menu-item'>
+    <image class='i2' src='/images/icon/icon_yuyue.png'></image>
+    <text>课程预约</text>
+  </view>
+  <view class='menu-item'>
+    <image class='i3' src='/images/icon/icon_baoming.png'></image>
+    <text>活动报名</text>
+  </view>
+  <view class='menu-item'>
+    <image class='i4' src='/images/icon/icon_shipin.png'></image>
+    <text>视频展示</text>
+  </view>
+</view>
+<view class='box'>
+  <view class='title-wrap'>
+    <view class='bl'>
+      <image class='icon icon1' src='/images/icon/icon2.png'></image>
+      <text class='t2'>课程推荐</text>
+    </view>
+    <text class='more'>更多</text>
+  </view>
+  <view class='list'>
+    <block wx:for="{{course}}" wx:key="{{index}}">
+      <view class='l-item' bindtap='navToCourseListTap' data-id='{{item.id}}' data-title='{{item.title}}'>
+        <image src='{{item.img}}'></image>
+        <text>{{item.title}}</text>
+      </view>
     </block>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+</view>
+<view class='box'>
+  <view class='title-wrap'>
+    <view class='bl'>
+      <image class='icon icon1' src='/images/icon/icon3.png'></image>
+      <text class='t2'>活动推荐</text>
+    </view>
+    <text class='more'>更多</text>
+  </view>
+  <view class='list'>
+    <block wx:for="{{activeList}}" wx:key="{{index}}">
+      <view class='l-item' bindtap='navToCourseListTap' data-id='{{item.id}}' data-title='{{item.title}}'>
+        <image src='{{item.img}}'></image>
+        <text>{{item.title}}</text>
+      </view>
+    </block>
+  </view>
+</view>
+<view class='box'>
+  <view class='title-wrap'>
+    <view class='bl'>
+      <image class='icon icon1' src='/images/icon/icon4.png'></image>
+      <text class='t2'>视频展示</text>
+    </view>
+    <text class='more'>更多</text>
+  </view>
+  <view class='video-wrap'>
+    <video></video>
+  </view>
+</view>
+<view class='box'>
+  <view class='title-wrap'>
+    <view class='bl'>
+      <image class='icon icon1' src='/images/icon/icon5.png'></image>
+      <text class='t2'>互动空间</text>
+    </view>
+    <text class='more'>更多</text>
+  </view>
+  <view class='list'>
+    <block wx:for="{{questionList}}" wx:key="{{index}}">
+      <view class='question-item'>
+        <image src='{{item.img}}'></image>
+        <view>{{item.title}}</view>
+        <view></view>
+      </view>
+    </block>
   </view>
 </view>
