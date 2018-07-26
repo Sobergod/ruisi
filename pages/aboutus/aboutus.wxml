@@ -1,0 +1,28 @@
+<!--pages/aboutus/aboutus.wxml-->
+<view class='banner'>
+  <swiper class='swiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="{{imgUrls}}">
+      <swiper-item class="swiper-item">
+        <image src="{{item}}" class="slide-image" mode='scaleToFill' />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='desc'>
+  <view class='desc-title'>{{descTitle}}</view>
+  <view class='desc-content'>{{content}}</view>
+</view>
+<view class='wrap bg1'>
+  <view class='contact-list'>
+    <block wx:for="{{contactList}}" wx:key="">
+      <view class='contact-item'>
+        <view class='t1'>{{item.title1}}</view>
+        <view class='t2' bindtap='call' data-phone='{{item.phone}}'>电话:{{item.phone}}</view>
+        <view class='t2'>地址:{{item.title2}}</view>
+        <view class='contact-img'>
+          <image src='{{item.img}}'></image>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

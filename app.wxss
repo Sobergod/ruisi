@@ -1,7 +1,18 @@
 /**app.wxss**/
 
 page {
-  background: #efefef;
+  background: #fff;
+}
+
+.nothing {
+  margin-top: 40px;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+.nothing:after {
+  content: "暂无内容...";
 }
 
 .swiper {
@@ -59,6 +70,11 @@ page {
   align-items: center;
   flex-direction: column;
   padding: 10rpx;
+}
+
+.menu-item image {
+  width: 60px;
+  height: 45px;
 }
 
 .menu-item text {
@@ -120,16 +136,111 @@ page {
   font-weight: 800;
   text-shadow: 0 0 1px #888;
 }
+
 .video-wrap {
   padding: 20rpx 0;
   margin-bottom: 20rpx;
   background: #fff;
   text-align: center;
 }
+
 .video-wrap video {
   margin: 0 auto;
   width: 95%;
 }
+
 .hudon-list {
   display: flex;
+}
+
+.question-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 20rpx 0;
+}
+
+.q-img {
+  flex: 2;
+  height: 80px;
+}
+
+.ly-wrap {
+  flex: 3;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.q-title {
+  margin: 0 10rpx;
+  font-size: 14px;
+  font-weight: 800;
+  color: #4d4d4d;
+}
+
+.ly {
+  align-self: flex-end;
+  width: 40px;
+  padding: 5rpx 10rpx;
+  font-size: 16px;
+  background-color: #ff7800;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.yuyue-title {
+  padding: 40rpx;
+  text-align: center;
+}
+
+.yuyue-title image {
+  width: 100%;
+}
+
+.decorate {
+  width: 78%;
+  margin: 0 auto;
+}
+
+.decorate image {
+  width: 100%;
+}
+
+.submit-btn {
+  display: inline-block;
+  margin-top: 20px;
+  width: 90%;
+  background: #7e318e;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+  border-radius: unset;
+  color: #eee;
+}
+
+.mine-list {
+  padding: 20rpx;
+  color: #4d4d4d;
+}
+.list-item {
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #eee;
+}
+.mine-title {
+  margin: 20rpx 0 10rpx 0;
+  font-weight: 800;
+}
+.mine-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.lxbtn {
+  padding: 0 20rpx;
+  background-color: #7e318e;
+  color: #fff;
+  border-radius: 10px;
 }

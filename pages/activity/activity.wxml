@@ -1,0 +1,10 @@
+<!--pages/activity/activity.wxml-->
+<view wx:if="{{activeList.length >0 }}" class='list'>
+  <block wx:for="{{activeList}}" wx:key="{{index}}">
+    <view class='l-item' bindtap='navToCourseListTap' data-id='{{item.id}}' data-title='{{item.title}}'>
+      <image src='{{item.img}}'></image>
+      <text>{{item.title}}</text>
+    </view>
+  </block>
+</view>
+<view wx:else class='nothing'></view>

@@ -1,0 +1,13 @@
+/* pages/video/video.wxss */
+.video-item {
+  padding: 20rpx;
+  text-align: center;
+}
+.v-title {
+  margin: 10rpx;
+  font-size: 17px;
+  font-weight: 800;
+}
+.video-item video {
+  width: 100%;
+}

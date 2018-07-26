@@ -40,7 +40,7 @@ Page({
     questionList: [{
         id: '1',
         img: '/images/img5.png',
-        title: '问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题?',
+        title: '问题问题问题?',
       },
       {
         id: '2',
@@ -75,6 +75,30 @@ Page({
     wx.navigateTo({
       url: '',
     })
+  },
+  moreTap: function(e) {
+    var id = e.currentTarget.dataset.id
+    if (id == 1) {
+      // 课程
+      wx.navigateTo({
+        url: '/pages/course/course',
+      })
+    } else if (id == 2) {
+      // 活动
+      wx.navigateTo({
+        url: '/pages/activity/activity',
+      })
+    } else if (id == 3) {
+      // 视频
+      wx.navigateTo({
+        url: '/pages/video/video',
+      })
+    } else if (id == 4) {
+      // 互动
+      wx.navigateTo({
+        url: '/pages/interaction/interaction',
+      })
+    }
   },
   onLoad: function() {
     if (app.globalData.userInfo) {

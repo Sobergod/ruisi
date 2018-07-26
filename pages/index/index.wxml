@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class='banner'>
   <swiper class='swiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{imgUrls}}">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
       <swiper-item class='swiper-item'>
         <image src="{{item}}" class="slide-image" mode='widthFix'></image>
       </swiper-item>
@@ -38,7 +38,8 @@
       <image class='icon icon1' src='/images/icon/icon2.png'></image>
       <text class='t2'>课程推荐</text>
     </view>
-    <text class='more'>更多</text>
+    <!-- 1 是课程推荐 -->
+    <text class='more' data-id='1' bindtap='moreTap'>更多</text>
   </view>
   <view class='list'>
     <block wx:for="{{course}}" wx:key="{{index}}">
@@ -55,7 +56,8 @@
       <image class='icon icon1' src='/images/icon/icon3.png'></image>
       <text class='t2'>活动推荐</text>
     </view>
-    <text class='more'>更多</text>
+    <!-- 2 是活动推荐 -->
+    <text class='more' data-id='2' bindtap='moreTap'>更多</text>
   </view>
   <view class='list'>
     <block wx:for="{{activeList}}" wx:key="{{index}}">
@@ -72,7 +74,7 @@
       <image class='icon icon1' src='/images/icon/icon4.png'></image>
       <text class='t2'>视频展示</text>
     </view>
-    <text class='more'>更多</text>
+     <text class='more' data-id='3' bindtap='moreTap'>更多</text>
   </view>
   <view class='video-wrap'>
     <video></video>
@@ -84,14 +86,16 @@
       <image class='icon icon1' src='/images/icon/icon5.png'></image>
       <text class='t2'>互动空间</text>
     </view>
-    <text class='more'>更多</text>
+    <text class='more' data-id='4' bindtap='moreTap'>更多</text>
   </view>
   <view class='list'>
     <block wx:for="{{questionList}}" wx:key="{{index}}">
       <view class='question-item'>
-        <image src='{{item.img}}'></image>
-        <view>{{item.title}}</view>
-        <view></view>
+        <image class='q-img' src='{{item.img}}'></image>
+        <view class='ly-wrap'>
+          <view class='q-title'>{{item.title}}</view>
+          <text class='ly'>留言</text>
+        </view>
       </view>
     </block>
   </view>

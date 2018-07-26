@@ -1,0 +1,4 @@
+/* pages/interaction/interaction.wxss */
+page {
+  background: #fff;
+}

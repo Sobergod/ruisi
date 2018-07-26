@@ -1,0 +1,38 @@
+<!--pages/yuyueactivity/yuyueactivity.wxml-->
+<view class='yuyue-title'>
+  <image src='/images/title1.png' mode='widthFix'></image>
+</view>
+<view class='wrap bg2'>
+  <form bindsubmit="formSubmit">
+    <view class='inp-wrap'>
+      <text>宝宝姓名:</text>
+      <input placeholder='填写姓名' name='babyname'></input>
+    </view>
+    <view class='inp-wrap'>
+      <picker class='picker-wrap' value="{{bath[bathIndex]}}" bindchange="bindDateChange" name="bath" range="{{bath}}">
+        <view class="picker">
+          <text>宝宝年龄:</text>
+          <text>{{bath[bathIndex]}}</text>
+        </view>
+      </picker>
+    </view>
+    <view class='inp-wrap'>
+      <text>联系电话:</text>
+      <input placeholder='填写电话' name="phone"></input>
+    </view>
+    <view class='inp-wrap'>
+      <picker class='picker-wrap' bindchange="bindPickerChange" value="{{activity[activitIndex]}}" range="{{activity}}" name="activity">
+        <view class="picker">
+          <text> 活动选择: </text>
+          <text>{{activity[activitIndex]}}</text>
+        </view>
+      </picker>
+    </view>
+    <view class='btn-wrap'>
+      <button class='submit-btn' formType='submit'>提交</button>
+    </view>
+  </form>
+</view>
+<view class='decorate'>
+  <image src='/images/decorate.png' mode='widthFix'></image>
+</view>

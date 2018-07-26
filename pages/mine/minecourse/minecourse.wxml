@@ -1,0 +1,12 @@
+<!--pages/mine/minecourse/minecourse.wxml-->
+<view class='mine-list'>
+  <block wx:for="{{mineCourse}}">
+    <view class='list-item'>
+      <view class='mine-title'>{{item.title}}</view>
+      <view class='mine-item'>
+        <text>预约时间:{{item.time}}</text>
+        <text class='lxbtn'>联系我们</text>
+      </view>
+    </view>
+  </block>
+</view>

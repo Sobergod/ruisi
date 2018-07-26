@@ -1,0 +1,34 @@
+<!--pages/mine/minedetail/minedetail.wxml-->
+<view class='banner'>
+  <swiper class='swiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item class='swiper-item'>
+        <image src="{{item}}" class="slide-image" mode='widthFix'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view>
+  <button wx:if="{{showBtn==1}}" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">获取用户信息</button>
+  <view wx:else class='user-wrap'>
+    <image class='userAvatarUrl' src="{{avatarUrl}}"></image>
+    <text class='userNickName'>{{nickName}}</text>
+  </view>
+</view>
+<form bindsubmit="formSubmit">
+  <view class='inp-wrap'>
+    <text>宝宝姓名:</text>
+    <input placeholder='填写姓名' name='babyname'></input>
+  </view>
+  <view class='inp-wrap'>
+    <text>宝宝年龄:</text>
+    <input placeholder='填写年龄' name='babyage'></input>
+  </view>
+  <view class='inp-wrap'>
+    <text>联系电话:</text>
+    <input placeholder='填写电话' name="phone"></input>
+  </view>
+  <view class='btn-wrap'>
+    <button class='submit-btn' formType='submit'>提交</button>
+  </view>
+</form>

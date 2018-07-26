@@ -1,0 +1,10 @@
+<!--pages/course/course.wxml-->
+<view wx:if="{{course.length >0 }}" class='list'>
+  <block wx:for="{{course}}" wx:key="{{index}}">
+    <view class='l-item' bindtap='navToCourseListTap' data-id='{{item.id}}' data-title='{{item.title}}'>
+      <image src='{{item.img}}'></image>
+      <text>{{item.title}}</text>
+    </view>
+  </block>
+</view>
+<view wx:else class='nothing'></view>

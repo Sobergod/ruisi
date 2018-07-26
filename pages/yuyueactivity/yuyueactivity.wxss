@@ -1,0 +1,34 @@
+/* pages/yuyueactivity/yuyueactivity.wxss */
+page {
+  background: #fff;
+}
+.inp-wrap {
+  display: flex;
+  align-items: center;
+  margin: 20rpx auto;
+  padding: 10rpx 40rpx;
+  width:80%;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, .9);
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px #666;
+}
+.inp-wrap input {
+  padding-left: 15px;
+}
+.picker-wrap {
+  width: 100%;
+}
+.picker {
+  display: flex;
+  height:1.4rem;
+  align-items: center;
+}
+.picker text {
+  margin-right: 20rpx;
+  vertical-align: middle;
+}
+.btn-wrap {
+  text-align: center;
+}
+

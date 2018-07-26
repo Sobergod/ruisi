@@ -1,0 +1,24 @@
+<!--pages/mine/mine.wxml-->
+<view class='banner'>
+  <swiper class='swiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item class='swiper-item'>
+        <image src="{{item}}" class="slide-image" mode='widthFix'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view>
+  <button wx:if="{{showBtn==1}}" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">获取用户信息</button>
+  <view wx:else class='user-wrap'>
+    <image class='userAvatarUrl' src="{{avatarUrl}}"></image>
+    <text class='userNickName'>{{nickName}}</text>
+  </view>
+</view>
+<view class='btn-group'>
+  <block wx:for="{{btn}}"  wx:key="{{index}}">
+    <view class='btn-item' data-id='{{item.id}}' bindtap='navToDetail'>
+      <text>{{item.title}}</text>
+    </view>
+  </block>
+</view>
