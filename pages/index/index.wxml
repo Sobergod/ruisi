@@ -15,22 +15,12 @@
   </view>
 </view>
 <view class='menu'>
-  <view class='menu-item'>
-    <image class='i1' src='/images/icon/icon_pinpai.png'></image>
-    <text>品牌介绍</text>
-  </view>
-  <view class='menu-item'>
-    <image class='i2' src='/images/icon/icon_yuyue.png'></image>
-    <text>课程预约</text>
-  </view>
-  <view class='menu-item'>
-    <image class='i3' src='/images/icon/icon_baoming.png'></image>
-    <text>活动报名</text>
-  </view>
-  <view class='menu-item'>
-    <image class='i4' src='/images/icon/icon_shipin.png'></image>
-    <text>视频展示</text>
-  </view>
+  <block wx:for="{{menu}}" wx:key="{{index}}">
+    <view class='menu-item' bindtap='navToMenuItemTap' data-url='{{item.navUrl}}'>
+      <image class='i1' src='{{item.img}}'></image>
+      <text>{{item.title}}</text>
+    </view>
+  </block>
 </view>
 <view class='box'>
   <view class='title-wrap'>
@@ -74,7 +64,7 @@
       <image class='icon icon1' src='/images/icon/icon4.png'></image>
       <text class='t2'>视频展示</text>
     </view>
-     <text class='more' data-id='3' bindtap='moreTap'>更多</text>
+    <text class='more' data-id='3' bindtap='moreTap'>更多</text>
   </view>
   <view class='video-wrap'>
     <video></video>

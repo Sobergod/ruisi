@@ -1,0 +1,18 @@
+<!--pages/message/message.wxml-->
+<view class='ms-title'>
+  <text class='mt1'>精选留言</text>
+  <text class='mt2' bindtap='writeMsg'>写留言</text>
+</view>
+<view class='msgList'>
+  <block wx:for="{{msgList}}" wx:key="{{index}}">
+    <view class='msgItem'>
+      <image class='userImg' src="{{item.userImg}}"></image>
+      <view class='msg-wrap'>
+        <view class='userName'>{{item.userName}}</view>
+        <block wx:for="{{item.msg}}">
+          <view class='{{item.msgType == 1? "msg-content":"msg-content2"}}'>{{item.msgContent}}</view>
+        </block>
+      </view>
+    </view>
+  </block>
+</view>

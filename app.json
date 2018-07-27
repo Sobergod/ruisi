@@ -11,7 +11,8 @@
     "pages/mine/mineactivity/mineactivity",
     "pages/mine/minecourse/minecourse",
     "pages/aboutus/aboutus",
-    "pages/video/video"
+    "pages/video/video",
+    "pages/message/message"
   ],
   "window": {
     "backgroundTextStyle": "light",

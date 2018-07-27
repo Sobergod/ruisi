@@ -1,6 +1,6 @@
 <!--pages/mine/minecourse/minecourse.wxml-->
 <view class='mine-list'>
-  <block wx:for="{{mineCourse}}">
+  <block wx:for="{{mineCourse}}" wx:key="{{index}}">
     <view class='list-item'>
       <view class='mine-title'>{{item.title}}</view>
       <view class='mine-item'>

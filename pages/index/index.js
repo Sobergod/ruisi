@@ -11,6 +11,23 @@ Page({
     autoplay: false,
     interval: 5000,
     duration: 1000,
+    menu: [{
+      title: "品牌介绍",
+      img: "/images/icon/icon_pinpai.png",
+      navUrl: 1,
+    }, {
+      title: "课程预约",
+      img: "/images/icon/icon_yuyue.png",
+      navUrl: 2,
+    }, {
+      title: "活动报名",
+      img: "/images/icon/icon_baoming.png",
+      navUrl: 3,
+    }, {
+      title: "视频展示",
+      img: "/images/icon/icon_shipin.png",
+      navUrl: 4,
+    }],
     course: [{
       id: "1",
       img: "/images/img1.png",
@@ -56,11 +73,31 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
+  //事件处理
+  navToMenuItemTap: function(e) {
+    var url = e.currentTarget.dataset.url;
+    switch (url) {
+      case 1:
+        wx.navigateTo({
+          url: '/pages/aboutus/aboutus',
+        })
+        break;
+      case 2:
+        wx.switchTab({
+          url: '/pages/yuyuecourse/yuyuecourse',
+        })
+        break;
+      case 3:
+        wx.navigateTo({
+          url: '/pages/yuyueactivity/yuyueactivity',
+        })
+        break;
+      case 4:
+        wx.navigateTo({
+          url: '/pages/video/video',
+        })
+        break;
+    }
   },
   navToCourseListTap: function(e) {
     var id = e.currentTarget.dataset.id,
