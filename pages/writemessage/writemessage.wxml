@@ -1,0 +1,10 @@
+<!--pages/writemessage/writemessage.wxml-->
+<view class='msgTitle'>{{msgTitle}}</view>
+<view>
+  <form bindsubmit="bindFormSubmit">
+    <view class='text-area'>
+      <textarea placeholder-class="pc" placeholder="留言由后台筛选后显示,并对所有人可见" name="textarea" />
+    </view>
+    <button form-type="submit" class='submitBtn'>留言</button>
+  </form>
+</view>

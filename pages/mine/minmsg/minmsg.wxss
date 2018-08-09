@@ -1,9 +1,13 @@
-/* pages/message/message.wxss */
-
+/* pages/mine/minmsg/minmsg.wxss */
 page {
   background: #eee;
 }
-
+.title {
+  padding: 20rpx;
+  font-size: 17px;
+  font-weight: 800;
+  background: #fff;
+}
 .ms-title {
   display: flex;
   justify-content: space-between;
@@ -21,6 +25,7 @@ page {
 .msgItem {
   display: flex;
   padding: 20rpx;
+  box-shadow: 1px 1px  5px #fff;
 }
 
 .userImg {

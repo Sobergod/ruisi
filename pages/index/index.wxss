@@ -2,3 +2,9 @@
 page {
   background: #efefef;
 }
+.swiper1 {
+  height: 25px;
+  width: 70%;
+  font-size: 14px;
+  line-height: 25px;
+}

@@ -12,7 +12,11 @@
     "pages/mine/minecourse/minecourse",
     "pages/aboutus/aboutus",
     "pages/video/video",
-    "pages/message/message"
+    "pages/message/message",
+    "pages/writemessage/writemessage",
+    "pages/coursedetail/coursedetail",
+    "pages/activitydetail/activitydetail",
+    "pages/mine/minmsg/minmsg"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -26,18 +30,26 @@
     "backgroundColor": "#fff",
     "list": [
       {
+        "iconPath": "/images/tabbar/home_icon.png",
+        "selectedIconPath": "/images/tabbar/home_icon_a.png",
         "pagePath": "pages/index/index",
         "text": "首页"
       },
       {
+        "iconPath": "/images/tabbar/course_icon.png",
+        "selectedIconPath": "/images/tabbar/course_icon_a.png",
         "pagePath": "pages/yuyuecourse/yuyuecourse",
         "text": "预约课程"
       },
       {
+        "iconPath": "/images/tabbar/active_icon.png",
+        "selectedIconPath": "/images/tabbar/active_icon_a.png",
         "pagePath": "pages/yuyueactivity/yuyueactivity",
         "text": "活动报名"
       },
       {
+        "iconPath": "/images/tabbar/mine_icon.png",
+        "selectedIconPath": "/images/tabbar/mine_icon_a.png",
         "pagePath": "pages/mine/mine",
         "text": "我的"
       }

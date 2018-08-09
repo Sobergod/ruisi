@@ -8,6 +8,17 @@ Page({
       '/images/banner1.png',
     ],
     indicatorDots: false,
+    autoplay: true,
+    interval: 2000,
+    duration: 1000,
+    gonggao: [
+      '公告内容1',
+      '公告内容2',
+      '公告内容3',
+      '公告内容4',
+      '公告内容5',
+    ],
+    indicatorDots: false,
     autoplay: false,
     interval: 5000,
     duration: 1000,
@@ -88,7 +99,7 @@ Page({
         })
         break;
       case 3:
-        wx.navigateTo({
+        wx.switchTab({
           url: '/pages/yuyueactivity/yuyueactivity',
         })
         break;
@@ -103,14 +114,20 @@ Page({
     var id = e.currentTarget.dataset.id,
       title = e.currentTarget.dataset.title;
     wx.navigateTo({
-      url: '',
+      url: '/pages/coursedetail/coursedetail?id=' + id,
     })
   },
   navToActiveListTap: function(e) {
     var id = e.currentTarget.dataset.id,
       title = e.currentTarget.dataset.title;
     wx.navigateTo({
-      url: '',
+      url: '/pages/activitydetail/activitydetail?id=' + id,
+    })
+  },
+  navToMsgTap: function(e) {
+    var id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: '/pages/message/message?msgId=' + id,
     })
   },
   moreTap: function(e) {

@@ -57,7 +57,7 @@ Page({
         break;
       case 4:
         wx.navigateTo({
-          url: '',
+          url: '/pages/mine/minmsg/minmsg',
         })
         break;
       case 5:

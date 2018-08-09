@@ -1,14 +1,15 @@
-// pages/message/message.js
+// pages/mine/minmsg/minmsg.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    msgId: 1, //帖子id
     msgList: [{
+      msgId: 1, //帖子id
       id: 1, //评论id
       userImg: "/images/icon/icon5.png",
+      msgTitle: "这是互动话题1",
       msg: [{
         reId: 1,
         msgType: 1,
@@ -32,8 +33,10 @@ Page({
         msgContent: "追加留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容"
       }, ]
     }, {
-      id: 2, //评论id
+      msgId: 2, //帖子id
+      id: 1, //评论id
       userImg: "/images/icon/icon5.png",
+      msgTitle: "这是互动话题1",
       msg: [{
         reId: 1,
         msgType: 1,
@@ -59,12 +62,13 @@ Page({
     }, ]
   },
   zanTap: function(e) {
-    var id = e.currentTarget.dataset.id, //主贴id
+    var msgId = e.currentTarget.dataset.msgid, //主贴id
       isZan = e.currentTarget.dataset.isZan,
       reId = e.currentTarget.dataset.reid,
       msgList = this.data.msgList; //回帖id;
+    console.log(msgId);
     for (let j = 0; j < msgList.length; j++) {
-      if (msgList[j].id == id) {
+      if (msgList[j].msgId == msgId) {
         for (let i = 0; i < msgList[j].msg.length; i++) {
           if (reId == msgList[j].msg[i].reId) {
             var iszan = 'msgList[' + j + '].msg[' + i + '].isZan';
@@ -82,6 +86,7 @@ Page({
       }
 
     }
+
 
   },
   writeMsgTap: function(e) {

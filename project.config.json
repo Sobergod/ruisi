@@ -33,65 +33,29 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 9,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
 					"name": "课程",
-					"pathName": "pages/course/course",
+					"pathName": "pages/activitydetail/activitydetail",
 					"query": ""
 				},
 				{
 					"id": -1,
-					"name": "活动",
-					"pathName": "pages/activity/activity",
+					"name": "123",
+					"pathName": "pages/message/message",
 					"query": ""
 				},
 				{
 					"id": -1,
-					"name": "互动",
-					"pathName": "pages/interaction/interaction",
+					"name": "123",
+					"pathName": "pages/mine/minmsg/minmsg",
 					"query": ""
 				},
 				{
 					"id": -1,
-					"name": "互动",
-					"pathName": "pages/yuyuecourse/yuyuecourse",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "我的",
-					"pathName": "pages/mine/mine",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "我的",
-					"pathName": "pages/mine/mineactivity/mineactivity",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "我的信息",
-					"pathName": "pages/mine/minedetail/minedetail",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "我的中心",
-					"pathName": "pages/aboutus/aboutus",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "视频",
-					"pathName": "pages/video/video",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "留言",
+					"name": "123",
 					"pathName": "pages/message/message"
 				}
 			]

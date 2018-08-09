@@ -1,0 +1,27 @@
+/* pages/writemessage/writemessage.wxss */
+page {
+  background: #eee;
+}
+.msgTitle {
+  padding: 20rpx;
+  font-size: 17px;
+}
+.text-area {
+  padding: 20rpx;
+  background: #fff;
+  font-size: 14px;
+  box-shadow: 1px 1px 5px #999;
+}
+.text-area textarea {
+  width: 100%;
+}
+.pc {
+  font-size: 14px;
+}
+.submitBtn {
+  margin-top: 20px;
+  width: 80%;
+  background-color: #7e318e;
+  font-size: 17px;
+  color: #fff;
+}

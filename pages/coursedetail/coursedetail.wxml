@@ -1,0 +1,5 @@
+<!--pages/coursedetail/coursedetail.wxml-->
+<view wx:if="{{courseDetail}}">
+  <rich-text nodes='{{courseDetail}}'></rich-text>
+</view>
+<view wx:else class='nothing'></view>

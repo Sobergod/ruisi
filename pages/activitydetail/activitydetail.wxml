@@ -1,0 +1,5 @@
+<!--pages/activitydetail/activitydetail.wxml-->
+<view wx:if="{{activityDetail}}">
+  <rich-text nodes='{{activityDetail}}'></rich-text>
+</view>
+<view wx:else class='nothing'></view>

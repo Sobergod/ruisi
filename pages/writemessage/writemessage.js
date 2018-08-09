@@ -1,42 +1,38 @@
-// pages/course/course.js
+// pages/writemessage/writemessage.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    course: [{
-      id: "1",
-      img: "/images/img1.png",
-      title: "学英语",
-    }, {
-      id: "2",
-      img: "/images/img2.png",
-      title: "学英语",
-    }, {
-      id: "3",
-      img: "/images/img3.png",
-      title: "6-12岁英语课程",
-    }, {
-      id: "4",
-      img: "/images/img4.png",
-      title: "3-5岁英语课程",
-    }],
+    msgTitle: "这是帖子标题",
+    msgType: 1,//帖子类型首次评论为1 回帖为2
   },
-  navToCourseListTap: function (e) {
-    var id = e.currentTarget.dataset.id,
-      title = e.currentTarget.dataset.title;
-    wx.navigateTo({
-      url: '/pages/coursedetail/coursedetail?id=' + id,
-    })
+  bindFormSubmit: function(e) {
+    var msgType = checkMsg
+    console.log(e.detail.value.textarea)
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    console.log(options);
+    this.checkMsg(options);
   },
-
+  // 判断是回复评论还是首次评论
+  checkMsg: function(option) {
+    if (option.reId) {
+      // 回复
+      this.setData({
+        msgType:2,
+      })
+    } else {
+      // 初次
+      this.setData({
+        msgType: 1,
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

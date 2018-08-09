@@ -13,6 +13,13 @@
     <image class='icon' src='/images/icon/icon1.png'></image>
     <text class='t1'>最新公告:</text>
   </view>
+  <swiper class='swiper1' vertical="true" indicator-dots="{{indicatorDots}}" autoplay="true" interval="4000" duration="{{duration}}">
+    <block wx:for="{{gonggao}}" wx:key="{{index}}">
+      <swiper-item class='swiper-item'>
+        <text>{{item}}</text>
+      </swiper-item>
+    </block>
+  </swiper>
 </view>
 <view class='menu'>
   <block wx:for="{{menu}}" wx:key="{{index}}">
@@ -67,7 +74,7 @@
     <text class='more' data-id='3' bindtap='moreTap'>更多</text>
   </view>
   <view class='video-wrap'>
-    <video></video>
+    <video poster='/images/banner1.png'></video>
   </view>
 </view>
 <view class='box'>
@@ -84,7 +91,7 @@
         <image class='q-img' src='{{item.img}}'></image>
         <view class='ly-wrap'>
           <view class='q-title'>{{item.title}}</view>
-          <text class='ly'>留言</text>
+          <text class='ly' bindtap='navToMsgTap' data-id='{{item.id}}'>留言</text>
         </view>
       </view>
     </block>

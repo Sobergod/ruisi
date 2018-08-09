@@ -1,27 +1,13 @@
-// pages/activity/activity.js
+// pages/activitydetail/activitydetail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    activeList: [{
-      id: "3",
-      img: "/images/img3.png",
-      title: "瑞思夏令营活动",
-    }, {
-      id: "4",
-      img: "/images/img4.png",
-      title: "瑞思周年庆活动",
-    }],
+    activityDetail:"<div>你好</div>"
   },
-  navToActivityListTap: function (e) {
-    var id = e.currentTarget.dataset.id,
-      title = e.currentTarget.dataset.title;
-    wx.navigateTo({
-      url: '/pages/activitydetail/activitydetail?id=' + id,
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */

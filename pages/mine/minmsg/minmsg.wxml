@@ -1,10 +1,7 @@
-<!--pages/message/message.wxml-->
-<view class='ms-title'>
-  <text class='mt1'>精选留言</text>
-  <text class='mt2' bindtap='writeMsgTap' data-msgid='{{msgId}}'>写留言</text>
-</view>
+<!--pages/mine/minmsg/minmsg.wxml-->
 <view class='msgList'>
   <block wx:for="{{msgList}}" wx:key="{{index}}" wx:for-item="msgListItem">
+    <view class='title'>{{msgListItem.msgTitle}}</view>
     <view class='msgItem'>
       <image class='userImg' src="{{msgListItem.userImg}}"></image>
       <view class='msg-wrap'>
@@ -16,7 +13,7 @@
                 <view>{{item.msgContent}}</view>
               </view>
               <view class='opt'>
-                <view class='zan' data-id="{{msgListItem.id}}" data-reid='{{item.reId}}' bindtap='zanTap'>
+                <view class='zan' data-msgid='{{msgListItem.msgId}}' data-reid='{{item.reId}}' data-iszan="{{item.isZan}}" bindtap='zanTap'>
                   <image class='zanImg' src='{{item.isZan == 1 ? "/images/icon/zan_a.png":"/images/icon/zan.png"}}'></image>
                   <text class='zanText' data-msgid="{{msgListItem.id}}" data-reid='{{item.reId}}'>{{item.zanCount}}</text>
                 </view>

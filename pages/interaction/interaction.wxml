@@ -1,7 +1,7 @@
 <!--pages/interaction/interaction.wxml-->
 <view wx:if="{{questionList.length>0}}" class='list'>
   <block wx:for="{{questionList}}" wx:key="{{index}}">
-    <view class='question-item'>
+    <view class='question-item' data-id='{{item.id}}' bindtap='navToMsgDetailTap'>
       <image class='q-img' src='{{item.img}}'></image>
       <view class='ly-wrap'>
         <view class='q-title'>{{item.title}}</view>
