@@ -17,7 +17,7 @@ Page({
     bathIndex:0,
     activitIndex:0,
     bath: ['选择年龄','3岁', '4岁', '5岁', '6岁', '7岁'],
-    activity: ['选择活动','春季开学季活动', '瑞思小达人'],
+    activity: ['选择活动','春季开学季活动春季开学季活动春季开学季活动春季开学季活动春季开学季活动', '瑞思小达人'],
   },
   bindDateChange: function(e) {
     this.setData({

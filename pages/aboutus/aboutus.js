@@ -9,6 +9,7 @@ Page({
     imgUrls: [
       '/images/banner2.jpg',
     ],
+    nodes:"<h1>你好长春市亚泰大街8599号卫星路欧亚超市4层长春市亚泰大街8599号卫星路欧亚超市4层长春市亚泰大街8599号卫星路欧亚超市4层</h1>",
     indicatorDots: false,
     autoplay: true,
     interval: 5000,

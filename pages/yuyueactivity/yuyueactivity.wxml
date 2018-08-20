@@ -5,26 +5,26 @@
 <view class='wrap bg2'>
   <form bindsubmit="formSubmit">
     <view class='inp-wrap'>
-      <text>宝宝姓名:</text>
-      <input placeholder='填写姓名' name='babyname'></input>
+      <text class='tt1'>宝宝姓名:</text>
+      <input class='tt2' placeholder='填写姓名' name='babyname'></input>
     </view>
     <view class='inp-wrap'>
       <picker class='picker-wrap' value="{{bath[bathIndex]}}" bindchange="bindDateChange" name="bath" range="{{bath}}">
         <view class="picker">
-          <text>宝宝年龄:</text>
-          <text>{{bath[bathIndex]}}</text>
+          <text class='tt1'>宝宝年龄:</text>
+          <text class='tt2'>{{bath[bathIndex]}}</text>
         </view>
       </picker>
     </view>
     <view class='inp-wrap'>
-      <text>联系电话:</text>
-      <input placeholder='填写电话' name="phone"></input>
+      <text class='tt1'>联系电话:</text>
+      <input class='tt2' placeholder='填写电话' name="phone"></input>
     </view>
     <view class='inp-wrap'>
       <picker class='picker-wrap' bindchange="bindPickerChange" value="{{activity[activitIndex]}}" range="{{activity}}" name="activity">
         <view class="picker">
-          <text> 活动选择: </text>
-          <text>{{activity[activitIndex]}}</text>
+          <text class='tt1'> 活动选择: </text>
+          <text class='tt2'>{{activity[activitIndex]}}</text>
         </view>
       </picker>
     </view>

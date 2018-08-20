@@ -26,3 +26,6 @@
     </block>
   </view>
 </view>
+<view style='padding:20rpx;'>
+  <rich-text nodes="{{nodes}}"></rich-text>
+</view>

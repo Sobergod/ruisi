@@ -14,7 +14,7 @@ page {
   box-shadow: 1px 1px 5px #666;
 }
 .inp-wrap input {
-  padding-left: 15px;
+  padding-left: 10px;
 }
 .picker-wrap {
   width: 100%;
